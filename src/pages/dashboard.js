@@ -5,6 +5,7 @@ import { PrismaClient } from '@prisma/client';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 const prisma = new PrismaClient();
 
@@ -297,7 +298,14 @@ export default function Dashboard({ user, tasks: initialTasks }) {
               <div className="flex items-center space-x-4">
                 <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-semibold">
                   {avatarPreview ? (
-                    <img src={avatarPreview} alt={user.name} className="w-full h-full rounded-full object-cover" />
+                    <div className="relative w-full h-full">
+                      <Image 
+                        src={avatarPreview} 
+                        alt={user.name} 
+                        fill
+                        className="rounded-full object-cover"
+                      />
+                    </div>
                   ) : (
                     getInitials(user.name)
                   )}

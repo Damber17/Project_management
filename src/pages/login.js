@@ -180,7 +180,7 @@ export default function Login() {
 
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Don&apos;t have an account?{' '}
+                New to Task Manager?{' '}
                 <Link href="/register" className="text-primary hover:text-primary/80">
                   Sign up
                 </Link>

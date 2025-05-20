@@ -303,7 +303,9 @@ export default function Dashboard({ user, tasks: initialTasks }) {
                         src={avatarPreview} 
                         alt={user.name} 
                         fill
+                        sizes="40px"
                         className="rounded-full object-cover"
+                        priority
                       />
                     </div>
                   ) : (
